@@ -1,5 +1,11 @@
 # @sveltejs/adapter-netlify
 
+## 1.0.0-next.10
+
+### Patch Changes
+
+- 2e72a94: Add type declarations
+
 ## 1.0.0-next.9
 
 ### Patch Changes
