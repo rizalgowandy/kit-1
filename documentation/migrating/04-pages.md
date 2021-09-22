@@ -4,7 +4,7 @@ title: Pages and layouts
 
 ### Renamed files
 
-Your custom error page component should be renamed from `_error.svelte` to `$error.svelte`. Any `_layout.svelte` files should likewise be renamed `$layout.svelte`. The `_` prefix now exclusively denotes your _own_ 'private' components and modules, as opposed to those with a special meaning to SvelteKit.
+Your custom error page component should be renamed from `_error.svelte` to `__error.svelte`. Any `_layout.svelte` files should likewise be renamed `__layout.svelte`. The double underscore prefix is reserved for SvelteKit; your own private modules are still denoted with a single `_` prefix.
 
 ### Imports
 
@@ -35,7 +35,7 @@ const { preloading, page, session } = stores();
 
 The `page` and `session` stores still exist; `preloading` has been replaced with a `navigating` store that contains `from` and `to` properties.
 
-You access them differently in SvelteKit. `stores` is now `getStores`, but in most cases it is unnecessary since you can import `navigating`, `page` and `session` directly from [`$app/stores`](/docs#modules-app-stores).
+You access them differently in SvelteKit. `stores` is now `getStores`, but in most cases it is unnecessary since you can import `navigating`, `page` and `session` directly from [`$app/stores`](/docs#modules-$app-stores).
 
 ### Routing
 
