@@ -1,3 +1,4 @@
-declare function plugin(): import('@sveltejs/kit').Adapter;
+import { Adapter } from '@sveltejs/kit';
+import './ambient.js';
 
-export = plugin;
+export default function plugin(opts?: { split?: boolean; edge?: boolean }): Adapter;
